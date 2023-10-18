@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="2.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="./bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./hello.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <script src="./jquery-3.7.0.min.js"></script>
+    <script src="./hello.js"></script>
+    <!-- <link rel="stylesheet" href="./swiper-bundle.min.css">
+    <script src="./swiper-bundle.min.js"></script> -->
+</head>
+<body class="bg-light">
+  
+        <nav class="navbar bg1 navbar-expand-md navbar-dark bg-dark fixed-top d-block" style="z-index:10;">
+          
+          <div class="container-fluid">
+          <!-- logo区域 -->
+          <a href="" class="navbar-brand"><img src="./img/ilogo.png" width="180" height="60" alt=""></a>
+          <!-- sji购物车按钮 -->
+          <button type="button" class="btn btn-dark position-relative pc-close" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" > 
+            <i class="fa fa-cart-arrow-down" >
+            <span  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              3+
+              
+            </span>
+          </i></button> 
+          <!-- 手机定位按钮你 -->
+          <button type="button" class="btn btn-dark pc-close"  data-bs-placement="bottom"
+              
+          data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"><i class="fa fa-map-marker-alt" >
+            
+          </i></button>  
+          <!-- 折叠按钮 -->
+          <button type="button" class="navbar-toggler"  data-bs-toggle="collapse"  data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+      
+            <!-- 导航列表 -->
+          <div >
+            <ul class="text-light navbar-nav ml-md-2 ">
+              <li class="nav-item "> <a href="" class="nav-link active">首页</a></li>
+              <li  class="nav-item "><a href="" class="nav-link">美味小吃</a></li>
+              <li  class="nav-item "><a href="" class="nav-link">拼盘</a></li>
+              <li  class="nav-item "><a href="" class="nav-link">套餐</a></li>
+              <li  class="nav-item "><a href="" class="nav-link">清爽饮品</a></li>
+              <li  class="nav-item "><a href="" class="nav-link">联系方式</a></li>
+            </ul>
+          </div>
+         
+          <!-- 收缩输入收缩按钮 -->
+          
+          <form >
+              
+            <div class="input-group"> 
+              <!-- 悬浮以及悬浮登录页面 -->
+              <a href="#modalCenter" data-bs-toggle="modal"><img src="./img/headerphoto.gif" class="rounded-circle"  alt="Circular Image"></a>  
+             
+            
+              <!-- 折叠空间 -->
+              <button type="button" class="btn btn-dark position-relative mobblie-close" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="margin-right:20px;"> 
+                <i class="fa fa-cart-arrow-down" >
+                <span  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  3+
+                  
+                </span>
+              </i></button>  
+               
+             
+              <button type="button" class="btn btn-dark mobblie-close"  data-bs-placement="bottom"
+              
+              data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"><i class="fa fa-map-marker-alt" >
+                
+              </i></button>         
+                <input type="text" class="form-control" placeholder="Search"> 
+                <button type="button" class="btn btn-dark mobblie-close"><i class="fa fa-search"></i></button>
+                
+            </div>
+        </form>
+        <!-- 登录模态框 -->
+        <div id="modalCenter" class="modal fade" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered"  >
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <div class="modal-title"> 
+                       
+                      </div>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body row">
+                      <div class="lt col-lg-5">
+                        <div class="top">
+                          <!-- <span>扫描二维码登录</span> -->
+                          <img src="./img/erweima.png" class="img-thumbnail" style="height: 180px; width: 180px;" alt="">
+                        </div>
+                      </div>
+                      <div class="rt col-lg-7">
+                        <div class="row">
+                          <div class="col-12 " >
+                            <ul class="nav topInput " style="font-size: 15px;">
+                              <li class="nav-item">
+                                <a href="" class="nav-link active text-dark " style="vertical-align:middle;line-height: 2rem;">密码登录</a>
+                              </li>
+                              <!-- <p style="vertical-align:middle;line-height: 2rem;">|</p> -->
+                              <li class="nav-item">
+                                <a href="" class="nav-link text-dark " style="vertical-align:middle;line-height: 2rem;">短信登录</a>
+                              </li>
+                              
+                            </ul>
+                          </div>
+                          <div class="sru col-12 " style="height: 120px;">
+                            <form action="" class="text-end">
+                              <input type="text" class="form-control" placeholder="请输入用户名" aria-label="Username">
+                              <input type="text" class="form-control mt-3" placeholder="请输入密码" aria-label="Username">
+                             <span><a href="#">忘记密码</a></span>
+                            </form>
+                            
+                          </div>
+                          <div class="buttomInput col-12">
+                        <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">注册</button>
+                        <button type="button" class="btn btn-primary ">登录</button>
+                      </div>
+                      </div>
+                      </div>
+                  </div>
+                  
+                  <div class="modal-footer text-secondary ">
+                     <span> 未注册过Pissa-π的手机号，我们将自动帮你注册账号</span>
+                     <span> 登录或完成注册即代表你同意</span>
+                     <span>登录或完成注册即代表你同意 <a href="">隐私政策</a>和 <a href="">用户协议</a></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+         
+        </div>
+      </div>
+          </nav>
+          <!-- 轮播 -->
+          <div id="myCarousel" class="carousel slide carousel-fade w-100 mt-5  " data-bs-ride="carousel"  data-wrap="true">
+            <!-- 指示符 -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <!-- 图片展示 -->
+            <div class="carousel-inner">
+              <div class="carousel-item active" >
+                <img src="./img/pisa1.png" class="d-block w-100  " alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="./img/pisa2.png" class="d-block w-100 " alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="./img/pisa3.png" class="d-block w-100 " alt="...">
+              </div>
+            </div>
+           
+            
+     
+            <!-- 按钮 -->
+            <a class="carousel-control-prev   " href="#myCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next  " href="#myCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+          </a>
+          </div>
+        </div>
+        
+        </div>
+       
+        <div class="trend mb-4 bg-light container  ">
+          
+          <div class="row ">
+            
+            <div class="mb1  container col-lg-8 col-md-10 border-bottom" >
+              <div>
+                <i class="fa fa-anchor"></i>
+                
+                <span class="text-secondary"> ></span>
+                <span class="text-dark">公告</span>
+                <span style="float: right; " class="text-secondary"><a href="" class="text-secondary">更多>></a></span>
+              </div>
+             
+              
+               <!-- 公告卡片区 -->
+                
+                  
+              
+              </div>
+              
+          <div class="card offset-md-2  col-4 col-md-6 mobblie">
+          <a href="" class="text-dark">
+            <img src="./img/pisa5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">六周年,我们一路同行!</h5>
+              <p class="card-text text-truncate ">就在今年十一之后,Pisa-π也是迎来了它六周年的生日,对此我们将放出周年庆活动,凡是 </p>
+          </a>
+              
+              
+            </div>
+          </div>
+          <div class="card offset-md-1  col-4 mobblie col-md-6" >
+          <a href="" >
+            <img src="./img/pisa1.png" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <a href="" class="text-dark">
+                <h5 class="card-title">关于近期上新</h5>
+                <p class="card-text text-truncate">中秋佳节,我店于今日上新!特大肉松披萨1元带回家</p>
+              </a>
+             
+              
+            </div>
+          
+           
+          </div>
+          <div class="card offset-md-2  col-4 col-md-6 mobblie">
+            <a href="" class="text-dark">
+              <img src="./img/pisa5.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">六周年,我们一路同行!</h5>
+                <p class="card-text text-truncate ">就在今年十一之后,Pisa-π也是迎来了它六周年的生日,对此我们将放出周年庆活动,凡是 </p>
+            </a>
+                
+                
+              </div>
+            </div>
+            <div class="card offset-md-1  col-4 mobblie col-md-6" >
+            <a href="" >
+              <img src="./img/pisa1.png" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="" class="text-dark">
+                  <h5 class="card-title">关于近期上新</h5>
+                  <p class="card-text text-truncate">中秋佳节,我店于今日上新!特大肉松披萨1元带回家</p>
+                </a>
+               
+                
+              </div>
+            
+             
+            </div>
+         
+          
+        
+       
+        <div class="aritcle bg-light container-fluid mb-2 mobblie-close " >
+          <!-- 分割线区 -->
+          <div class="row">
+            <div class="mb2  container col-lg-8 col-md-10 border-bottom" >
+              <div>
+                <i class="fa fa-pizza-slice" ></i>
+                
+              
+                <span class="text-secondary"> ></span>
+                <span class="text-dark">披萨</span>
+                <span style="float: right; " class="text-secondary"></span>
+              </div>
+             
+              
+               
+                
+                  
+              
+              </div>
+        </div>
+        <!-- 卡片区与分页区 -->
+        <!-- 手机版去掉公告重构 -->
+       <div >
+        <div class="row   ">
+          <div class="col-4 offset-lg-2 ">
+            <div class="card goum h-70">
+              <img src="./img/pisa1.png" style="position: relative;" class="img-thumbnail" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-truncate">招牌榴莲薄脆</h5>
+                <p class="card-text text-truncate">精选xxx与xxx,xx xxxxxxxxxxxxxx</p>
+                <a href="#" class="btn btn-primary ">$28/份</a>
+                <a href="" class="text-danger shopcar " ><i class="fa fa-cart-plus"  ></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 card-control ">
+            <div class="card goum h-80">
+              <img src="./img/pisa1.png" class="img-thumbnail" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-truncate">月亮披萨6英寸</h5>
+                <p class="card-text text-truncate">我是一段介绍 </p>
+                <a href="#" class="btn btn-primary">$28/份</a>
+                <a href="" class="text-danger shopcar " ><i class="fa fa-cart-plus"  ></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 card-control  ">
+            <div class="card goum h-80">
+              <img src="./img/pisa1.png" class="img-thumbnail" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-truncate">月亮披萨6英寸</h5>
+                <p class="card-text text-truncate">我是一段介绍 </p>
+                <a href="#" class="btn btn-primary">$28/份</a>
+                <a href="" class="text-danger shopcar " ><i class="fa fa-cart-plus"  ></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 card-control ">
+            <div class="card goum h-80">
+              <img src="./img/pisa1.png" class="img-thumbnail" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-truncate">月亮披萨6英寸</h5>
+                <p class="card-text text-truncate">我是一段介绍 </p>
+                <a href="#" class="btn btn-primary">$28/份</a>
+                <a href="" class="text-danger shopcar " ><i class="fa fa-cart-plus"  ></i></a>
+              </div>
+            </div>
+          </div>
+          
+         
+        </div>
+        <div class="row mt-3 ">
+          <div class="col-4  offset-lg-2 ">
+            <div class="card goum h-70">
+              <img src="./img/pisa1.png" class="img-thumbnail" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-truncate">月亮披萨6英寸</h5>
+                <p class="card-text text-truncate">我是一段介绍</p>
+                <a href="#" class="btn btn-primary">$28/份</a>
+                <a href="" class="text-danger shopcar " ><i class="fa fa-cart-plus"  ></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4  card-control ">
+            <div class="card goum h-80">
+              <img src="./img/pisa1.png" class="img-thumbnail" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">月亮披萨6英寸</h5>
+                <p class="card-text">我是一段介绍 </p>
+                <a href="#" class="btn btn-primary">$28/份</a>
+                <a href="" class="text-danger shopcar " ><i class="fa fa-cart-plus"  ></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4  card-control ">
+            <div class="card goum h-80">
+              <img src="./img/pisa1.png" class="img-thumbnail" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-truncate">奥尔良鸡肉披萨7英寸</h5>
+                <p class="card-text text-truncate">我是一段介绍 </p>
+                <a href="#" class="btn btn-primary">$38/份</a>
+                <a href="" class="text-danger shopcar " ><i class="fa fa-cart-plus"  ></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4  card-control ">
+            <div class="card goum h-80">
+              <img src="./img/pisa1.png" class="img-thumbnail" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">黑胶牛肉面</h5>
+                <p class="card-text">我是一段介绍 </p>
+                <a href="#" class="btn btn-primary">$28/份</a>
+                <a href="" class="text-danger shopcar " ><i class="fa fa-cart-plus"  ></i></a>
+              </div>
+            </div>
+          </div>
+          
+         
+        </div>
+         
+        <nav aria-label="..." class="mt-4 d-flex justify-content-center">
+          <ul class="pagination pagination-lg">
+            <li class="page-item " aria-current="page">
+              <span class="page-link">1</span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+          </ul>
+        </nav>
+     
+        </div>
+      </div>
+      <div class="pc-close">
+        <div class="container-fluid " style="margin-top: 10px;margin-bottom: 20px; ">
+        
+          <div class="row">
+            <div class="mb2  container col-lg-8 col-md-10 border-bottom" >
+              <div>
+                <i class="fa fa-pizza-slice" ></i>
+                
+              
+                <span class="text-secondary"> ></span>
+                <span class="text-dark">菜单</span>
+                <span style="float: right; " class="text-secondary"></span>
+              </div>
+            </div>
+          </div>
+          <!-- 菜单区 -->
+          <div class="row deck">
+          <div class="col-4">
+            <ul class="nav navbar-dark nav-tabs flex-column border border-secondary rounded-3">
+              <li class="nav-item ">
+              <a class="nav-link text-dark active "  href="javascript:void(0);">招牌必点</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link text-dark active "  href="javascript:void(0);">招牌必点</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link text-dark active "  href="javascript:void(0);">招牌必点</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link text-dark active "  href="javascript:void(0);">招牌必点</a>
+                    </li>
+              <li class="nav-item">
+              <a class="nav-link text-dark" href="javascript:void(0);">风味意面</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link text-dark" href="javascript:void(0);">薄脆披萨</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link  text-dark" href="javascript:void(0);" tabindex="-1" aria-disabled="true">能量炒饭</a>
+              </li>
+              </ul>
+          </div>
+          <div class="col-8 border">
+            
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- 页尾 -->
+      <div>
+    <div class="foot p-4 text-light text-start w-100 bg-dark  " style="height: 200px; font-size: 12px;">
+          <div class="container  " style="font-size: 14px;">
+            <div class="offset-lg-2 row
+            ">
+              <div class="bigbang col-lg-5">
+             <div>
+              <span >Design By [ xxxx  ] 辽ICP备2021005557号</span>
+            </div>
+              <div class=""  style="margin-top:15px ;">
+               <span ><i class="fa fa-phone-alt" ></i> : 13741150897</span> &nbsp;&nbsp;
+                <span ><i class="fa fa-comments" ></i> : godsfall@qq.com</span>
+              </div>
+             <div  style="margin-top:15px ;">
+              <i class="fa fa-map" ></i>
+              <span> : 辽宁省沈阳市浑南区天赐街5-1号</span>
+             </div>
+            
+            </div>
+           <div class="postion col-lg-7">
+
+           </div>
+           <div class="col-lg-12 text-start mt-3 "style="font-size:12px">
+            <span>友情链接 : 
+              <a href="" class="text-light">[ xxx ]</a>
+              <a href="" class="text-light">[ xxxx ]</a>
+              <a href="" class="text-light">[ xxx ]</a>
+              <a href="" class="text-light">[ xxxx ]</a>
+              <a href="" class="text-light">[ xxxx ]</a>
+              <a href="" class="text-light">[ xxxx ]</a>
+              
+
+          <div class="offcanvas offcanvas-end bg-light" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="z-index: 9;">
+          <div class="offcanvas-header">
+          <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+          购物车展开页面
+          </div>
+          </div>
+          <div class="offcanvas offcanvas-end bg-light" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel" style="z-index: 9;">
+            <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+            地址展开页面
+            </div>
+            </div>
+            </span>
+           </div>
+          </div>
+          
+          
+        
+    </div>
+  </div>
+</body>
+</html>
